@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -9,6 +9,8 @@ using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.EntityFrameworkCore;
+using Web_Application_with_Razor_Pages.Models;
 
 namespace Web_Application_with_Razor_Pages
 {
@@ -33,6 +35,9 @@ namespace Web_Application_with_Razor_Pages
 
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+
+            services.AddDbContext<Web_Application_with_Razor_PagesContext>(options =>
+                    options.UseSqlServer(Configuration.GetConnectionString("Web_Application_with_Razor_PagesContext")));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
