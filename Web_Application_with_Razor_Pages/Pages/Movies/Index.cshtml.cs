@@ -20,9 +20,17 @@ namespace Web_Application_with_Razor_Pages.Pages.Movies
 
         public IList<Movie> Movie { get;set; }
 
-        public async Task OnGetAsync()
+        public async Task OnGetAsync(string searchString)
         {
-            Movie = await _context.Movie.ToListAsync();
+            var movies = from m in _context.Movie
+                         select m;
+
+            if (!String.IsNullOrEmpty(searchString))
+            {
+                movies = movies.Where(s => s.Title.Contains(searchString));
+            }
+
+            Movie = await movies.ToListAsync();
         }
     }
 }
