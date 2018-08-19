@@ -5,12 +5,14 @@
 Web Application using Razor Pages Technology with:
 - SQL DataBase written using T-SQL in [Design] window, and connected to C# application
 - Implemented CRUD functionality with Razor Pages template
+- Search function and filter by Genre
 
 
 Still pending activities to be done:
-- Search bar (with functionality)
 - New field in Create.cshtml and Create.cshtml.cs
 - Validation
+- Rework of content
+- Rework using CSS Framework
 
 
 This web application was written according to https://docs.microsoft.com documentation"
