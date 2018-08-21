@@ -43,7 +43,4 @@ Still pending activities to be done:
 - Rework using CSS Framework
 
 
-This web application was written according to https://docs.microsoft.com documentation
-Document: https://docs.microsoft.com/en-us/aspnet/core/tutorials/razor-pages
-
-Last update: 21.08.2018 12:22"
+This web application was written according to https://docs.microsoft.com documentation"
