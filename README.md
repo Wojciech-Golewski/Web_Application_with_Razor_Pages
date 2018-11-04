@@ -1,4 +1,4 @@
-# Web_Application_with_Razor_Pages
+# Web Application (Razor Pages)
 
 Web application project for training purposes only.
 
